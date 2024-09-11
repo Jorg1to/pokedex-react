@@ -1,6 +1,6 @@
 import React, { useEffect , useState} from 'react'
 import css from './layout.module.scss'
-import Header from '../header/header'
+import Header from '../header/Header'
 import axios from 'axios'
 import { URL_POKEMON } from '../../../api/apiRest'
 import Card from '../card/Card'
