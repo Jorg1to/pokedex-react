@@ -1,0 +1,71 @@
+.header {
+  background-color: #e64646; /* Podrías optar por un degradado aquí */
+  padding: 10px 0; /* Añadir algo de padding para darle espacio */
+  
+  .div_header {
+    height: 124px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1400px;
+    max-width: calc(100% - 30px);
+    margin: 0 auto;
+
+    /* Logo */
+    .div_logo {
+      > img {
+        width: 220px;
+        transition: transform 0.3s ease; /* Animación al pasar el cursor sobre el logo */
+        
+        &:hover {
+          transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
+        }
+      }
+    }
+
+    /* Buscador */
+    .div_search {
+      width: 12%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 35px; 
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); 
+      background-color: #1f86ed; 
+      transition: box-shadow 0.3s ease; 
+
+      &:hover {
+        box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); /* Sombra más fuerte al pasar el ratón */
+      }
+
+      
+
+      /* Media query para pantallas pequeñas */
+      @media screen and (max-width: 500px) {
+        width: 70%; /* Ajustar el ancho en móviles */
+      }
+
+      > div {
+        width: 20%;
+        background-color: #1f86ed;
+        height: 35px;
+        display: grid;
+        place-items: center;
+        color: white;
+        font-size: 14px;
+      }
+
+      > input {
+        width: 80%;
+        padding: 5px 10px;
+        height: 35px;
+        border: none;
+        outline: none;
+        font-size: 14px; /* Tamaño de fuente más grande */
+        color: #333; /* Color del texto */
+      }
+    }
+  }
+}

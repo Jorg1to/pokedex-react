@@ -1,0 +1,49 @@
+.card_content{
+
+    width: 1400px;
+    max-width: calc(100% - 30px);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns:  repeat(auto-fill , minmax(250px , 1fr));
+    grid-gap: 25px;
+    padding-bottom: 30px;
+
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+}
+  
+button {
+  
+    background-color: rgb(31, 134, 237);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border-radius: 50px; /* Botón redondo */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para un efecto flotante */
+
+    &:hover {
+      background-color: #90c7e3; /* Un tono ligeramente más oscuro al hacer hover */
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más profunda al pasar el ratón */
+      transform: translateY(-5px); /* Efecto de elevación al hacer hover */
+    }
+
+    &:active {
+      background-color: #80b8d1; /* Color un poco más oscuro al hacer clic */
+      transform: translateY(2px); /* Efecto de "presionado" */
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra reducida al hacer clic */
+    }
+
+    &:focus {
+      outline: none; /* Elimina el borde de enfoque por defecto */
+    }
+}
