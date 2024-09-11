@@ -11,39 +11,53 @@
 
 }
 .buttons {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas más pequeñas */
+  margin: 20px 0;
 }
-  
-button {
-  
-    background-color: rgb(31, 134, 237);
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    margin: 0 10px;
-    border-radius: 50px; /* Botón redondo */
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease; /* Transición suave para todos los cambios */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para un efecto flotante */
 
-    &:hover {
+button {
+  background-color: rgb(31, 134, 237);
+  color: white;
+  border: none;
+  padding: 0.8em 1.6em; /* Usar em para tamaños relativos */
+  margin: 0.5em; /* Ajusta el margen para que se adapte */
+  border-radius: 50px; /* Botón redondo */
+  font-size: 1rem; /* Ajusta el tamaño de la fuente */
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transición suave para todos los cambios */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para un efecto flotante */
+
+  &:hover {
       background-color: #90c7e3; /* Un tono ligeramente más oscuro al hacer hover */
       box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más profunda al pasar el ratón */
       transform: translateY(-5px); /* Efecto de elevación al hacer hover */
-    }
+  }
 
-    &:active {
+  &:active {
       background-color: #80b8d1; /* Color un poco más oscuro al hacer clic */
       transform: translateY(2px); /* Efecto de "presionado" */
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra reducida al hacer clic */
-    }
+  }
 
-    &:focus {
+  &:focus {
       outline: none; /* Elimina el borde de enfoque por defecto */
-    }
+  }
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  button {
+      padding: 0.6em 1.2em; /* Ajusta el padding para pantallas más pequeñas */
+      font-size: 0.9rem; /* Ajusta el tamaño de la fuente */
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+      padding: 0.5em 1em; /* Ajusta aún más el padding para pantallas muy pequeñas */
+      font-size: 0.8rem; /* Ajusta el tamaño de la fuente */
+  }
 }
